@@ -1,0 +1,103 @@
+body{
+    background: linear-gradient(125deg, #e66465, #9198e5);
+}
+
+/* Center the carousel and make it smaller */
+.carousel {
+    max-width: 700px;
+    margin: 50px auto;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Make images look good */
+.carousel-item img {
+    height: 400px;
+    object-fit: cover; /* Keeps aspect ratio, crops to fill */
+    width: 100%;
+    display: block;
+    border-radius: 15px;
+}
+
+/* Optional: style indicators */
+.carousel-indicators [data-bs-target] {
+    background-color: #555;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+/* Highlight active indicator */
+.carousel-indicators .active {
+    background-color: #007bff;
+}
+
+/* Optional: style arrows */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 50%;
+}
+@media (max-width: 768px) {
+    .carousel-item img {
+        height: 250px;
+    }
+}
+footer{
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    z-index: 1000;
+}
+/* ========== GENERAL FIXES ========== */
+body, html {
+    height: auto;
+    overflow-x: hidden;
+}
+
+.container {
+    padding-bottom: 60px; /* So footer is not overlapped */
+}
+
+/* ========== CARD STYLING ========== */
+.custom-card {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s;
+}
+
+.custom-card:hover {
+    transform: translateY(-4px);
+}
+
+.card-img-top {
+    width: 100%;
+    height: auto; /* Let image keep full aspect ratio */
+    display: block;
+    border-bottom: 1px solid #ddd;
+}
+
+/* ========== RESPONSIVENESS ========== */
+@media (max-width: 768px) {
+    .row.g-4 > [class*="col-"] {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .custom-card {
+        max-width: 90%; /* Smaller cards on mobile */
+    }
+}
+
